@@ -15,8 +15,16 @@ Rules:
 - reject unknown or malformed input early
 - transform numeric and boolean query params explicitly
 - bound pagination limits
+- add product-defined upper bounds for numeric inputs that map to bounded database columns
+- add `@MaxLength` or equivalent for free-text and URL/string fields
 - validate enum values
 - validate IDs before database usage when possible
+
+Examples:
+
+- money in cents should have both a lower bound and an agreed upper bound before persistence
+- descriptions, comments, URLs, and names should have length limits even in internal tools
+- validation should fail with a controlled 4xx response before Prisma or the database throws a 500
 
 ## Authentication
 

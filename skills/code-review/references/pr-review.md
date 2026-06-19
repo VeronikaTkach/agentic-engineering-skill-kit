@@ -18,6 +18,7 @@ A strong PR should include:
 - screenshots for UI changes when relevant
 - migration notes for database changes
 - rollback notes for risky changes
+- scaffold hygiene for greenfield projects: `.gitignore`, `.env.example`, no committed real `.env`, no `node_modules`, no `dist`, no coverage artifacts
 
 ## Findings Priority
 

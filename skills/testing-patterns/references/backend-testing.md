@@ -41,6 +41,8 @@ Use when:
 
 Prefer isolated test databases or transaction rollback patterns.
 
+When a transaction or concurrency path is tested with mocks, label it as simulated coverage. Do not present it as equivalent to a real database concurrency test.
+
 ## Migration Verification
 
 For risky migrations, define checks before writing or running the migration:
@@ -51,6 +53,8 @@ For risky migrations, define checks before writing or running the migration:
 - post-migration constraint verification
 - rollback or restore verification when available
 - application-level smoke test after deployment
+
+If no live database is available, generate and review migration SQL, but report the migration as not applied.
 
 ## Guards
 

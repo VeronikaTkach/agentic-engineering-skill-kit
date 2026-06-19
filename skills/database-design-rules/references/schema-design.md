@@ -38,6 +38,8 @@ Do not reuse a status enum for audit actions or domain events when the words des
 - Store money as integer minor units such as cents.
 - Store currency explicitly when more than one currency is possible.
 - Avoid floating point values for money.
+- Define a domain maximum for monetary fields when the database column has a practical range.
+- Mirror money bounds in DTO validation so invalid values fail before database insertion.
 
 ## Audit Fields
 

@@ -37,6 +37,22 @@ Best for:
 - API clients
 - Tailwind, shadcn/ui, Radix UI conventions
 
+### pwa-rules
+
+Use when a frontend app is installable, offline-capable, or uses service workers, Web App Manifest, Cache Storage, push notifications, background sync, or app update flows.
+
+Best for:
+
+- PWA planning and review
+- Web App Manifest
+- service worker lifecycle
+- cache strategy
+- offline and poor-network UX
+- app update prompts
+- installability checks
+- Lighthouse PWA checks
+- browser/device validation
+
 ## Backend Implementation
 
 ### nestjs-backend-rules
@@ -210,10 +226,21 @@ Best for:
 
 1. `spec-driven-development`
 2. `react-enterprise-rules` and/or `nestjs-backend-rules`
-3. `database-design-rules` if persistence changes
+3. `pwa-rules` if installability, service workers, offline behavior, or cache storage are involved
+4. `database-design-rules` if persistence changes
+5. `testing-patterns`
+6. `typescript-code-review`
+7. `agent-security-review` if sensitive
+8. `code-review`
+
+## PWA Feature or App
+
+1. `spec-driven-development`
+2. `react-enterprise-rules`
+3. `pwa-rules`
 4. `testing-patterns`
-5. `typescript-code-review`
-6. `agent-security-review` if sensitive
+5. `agent-security-review` if offline data, auth, push, payments, or sensitive cached data are involved
+6. `typescript-code-review`
 7. `code-review`
 
 ## Backend Endpoint

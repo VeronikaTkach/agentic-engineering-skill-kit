@@ -2,7 +2,7 @@
 
 A portable skill library for agent-assisted software development.
 
-This kit packages reusable agent skills, routing guidance, and roadmap documents for building production-minded agentic workflows around TypeScript, React, NestJS, PostgreSQL, Prisma, MCP, security review, evaluation, observability, A2A, A2UI, and agentic commerce patterns.
+This kit packages reusable agent skills, routing guidance, and roadmap documents for building production-minded agentic workflows around TypeScript, React, PWA, NestJS, PostgreSQL, Prisma, MCP, security review, evaluation, observability, A2A, A2UI, and agentic commerce patterns.
 
 ## What's Included
 
@@ -16,6 +16,7 @@ This kit packages reusable agent skills, routing guidance, and roadmap documents
 
 - `spec-driven-development`
 - `react-enterprise-rules`
+- `pwa-rules`
 - `nestjs-backend-rules`
 - `database-design-rules`
 - `testing-patterns`
@@ -79,6 +80,12 @@ Use spec-driven-development to create a feature spec for [feature]. Include acce
 Implement the approved spec. Use react-enterprise-rules for frontend, nestjs-backend-rules for backend, database-design-rules for persistence changes, and testing-patterns for tests.
 ```
 
+### Build or Review a PWA
+
+```text
+Use pwa-rules for this PWA work. Cover manifest, service worker strategy, offline/online UX, cache invalidation, app update behavior, installability, Lighthouse checks, and browser/device testing.
+```
+
 ### Focused TypeScript Review
 
 ```text
@@ -103,10 +110,11 @@ For new features:
 
 1. Start with `spec-driven-development`.
 2. Use implementation skills for affected layers.
-3. Use `testing-patterns`.
-4. Use `typescript-code-review`.
-5. Use `agent-security-review` when sensitive data, permissions, tools, production, or external actions are involved.
-6. Use `code-review` before merge.
+3. Use `pwa-rules` when the app is installable, offline-capable, or uses service workers/cache storage.
+4. Use `testing-patterns`.
+5. Use `typescript-code-review`.
+6. Use `agent-security-review` when sensitive data, permissions, tools, production, or external actions are involved.
+7. Use `code-review` before merge.
 
 ## Status
 

@@ -49,6 +49,7 @@ Required workflow:
 
 - Do not assume managers can submit expenses. If useful, put it in Open Questions.
 - `POST /expenses` should be employee-only unless the user approves broader behavior.
+- Do not assume managers can view finalized expenses by ID. The task only grants managers visibility into pending expenses from all employees; broader manager history access belongs in Open Questions.
 - Do not trust client-provided `employeeId` or `managerId`.
 - Prefer rejecting client-provided identity or authority fields over silently ignoring them.
 - Header-based auth stubs are dev/test-only and must be called out as residual risk.
@@ -85,6 +86,7 @@ The spec should include:
 
 - Agent does not start coding immediately.
 - Agent does not broaden employee submit permission to managers.
+- Agent does not broaden manager read visibility from pending expenses to all expenses unless it marks that as an Open Question.
 - Agent flags header-based auth as dev/test-only if it proposes one.
 - Agent requires trusted auth context for identity.
 - Agent rejects or explicitly plans to reject client-supplied identity or authority fields.

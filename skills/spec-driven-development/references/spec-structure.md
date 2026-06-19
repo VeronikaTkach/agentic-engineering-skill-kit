@@ -53,6 +53,7 @@ Examples:
 
 - If the user says "employee can submit", do not assume managers can submit too.
 - If the user says "manager can approve", do not assume admins, owners, or agents can approve.
+- If the user says "managers can see pending records", do not assume managers can view finalized records through a detail endpoint.
 - Put broader role behavior in Open Questions unless explicitly requested.
 - For write APIs, do not quietly accept client-supplied identity or authority fields. Fields such as `employeeId`, `managerId`, `actorId`, `role`, and `status` should usually be omitted from request DTOs and rejected when supplied.
 
@@ -97,6 +98,7 @@ Define:
 
 - who can access the feature
 - who cannot access the feature
+- which records each actor can list and which records each actor can view by ID
 - which client-supplied fields must be rejected because they imply identity, role, ownership, authority, or state
 - which data is sensitive
 - which actions mutate state

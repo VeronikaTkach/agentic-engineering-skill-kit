@@ -33,6 +33,7 @@ Check:
 - environment boundary
 - action type
 - approval requirement
+- list-view and detail-view visibility separately
 
 ## Client-Supplied Authority Fields
 

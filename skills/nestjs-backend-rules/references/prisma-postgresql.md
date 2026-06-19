@@ -34,6 +34,12 @@ For high-risk migrations, include:
 - data backup or backfill strategy
 - approval before production execution
 
+For every generated migration:
+
+- ensure `migration.sql` contains only executable SQL and SQL comments
+- remove CLI notices, package update prompts, logs, and terminal UI text from the migration file
+- do not report a migration as ready until the SQL file has been inspected
+
 ## Query Rules
 
 - Use pagination for list endpoints.

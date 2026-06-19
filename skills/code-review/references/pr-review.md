@@ -19,6 +19,7 @@ A strong PR should include:
 - migration notes for database changes
 - rollback notes for risky changes
 - scaffold hygiene for greenfield projects: `.gitignore`, `.env.example`, no committed real `.env`, no `node_modules`, no `dist`, no coverage artifacts
+- deployable artifact hygiene: production builds should not include tests, e2e specs, fixtures, coverage, or local build-cache files
 
 ## Findings Priority
 

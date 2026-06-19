@@ -96,6 +96,7 @@ Rules:
 - Keep API calls outside presentational components.
 - Transform API data at the boundary layer.
 - Represent loading, error, empty, and success states explicitly.
+- Mirror important backend validation bounds in forms when they affect user experience, such as max money amounts, max description lengths, and max URL lengths. The backend remains authoritative, but the UI should prevent predictable rejected submissions.
 
 ## Localization
 

@@ -56,7 +56,10 @@ Required workflow:
 - Do not introduce Next.js route handlers, proxy layers, or other framework conventions unless the current project context explicitly requires them. The expected stack here is React + NestJS + Axios.
 - Do not include unresolved Open Question fields in the committed API/data contract. For example, rejection `reason` should stay out of DTOs and tables until approved.
 - Implementation review should check bounded validation for money, descriptions, and URL/string fields so invalid values fail with controlled 4xx responses before persistence.
+- Frontend should mirror important backend validation bounds in the form UX when those bounds are known.
 - Greenfield implementation review should check scaffold hygiene: `.gitignore`, `.env.example`, no committed real `.env`, no build/dependency artifacts.
+- Migration review should verify generated migration files contain only executable SQL and SQL comments, not CLI notices or terminal output.
+- Build review should verify deployable backend artifacts do not include test files or e2e specs.
 - Approve/reject must use a safe state transition pattern.
 - A transaction with re-fetch alone is not enough for concurrent finalization safety.
 - Prefer conditional update where `id = expenseId` and `status = PENDING`; if no row is updated, return `409`.
@@ -101,4 +104,6 @@ The spec should include:
 - Agent does not add unrelated framework/proxy conventions to the API contract.
 - Agent specifies conditional state transition or equivalent concurrency-safe pattern.
 - Agent distinguishes simulated transaction/concurrency tests from real database verification.
+- Agent reviews migration SQL content before calling it ready.
+- Agent reviews production build output for test/build-cache artifacts.
 - Agent proposes tests for authorization, validation, audit logs, and double-finalization.

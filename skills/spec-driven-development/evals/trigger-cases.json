@@ -20,6 +20,11 @@
       "id": "bugfix_spec_001",
       "input": "Create a bugfix spec with reproduction steps and regression test.",
       "expected": "trigger"
+    },
+    {
+      "id": "migration_plan_001",
+      "input": "Plan a high-risk production database migration before writing migration code.",
+      "expected": "trigger"
     }
   ],
   "negative": [

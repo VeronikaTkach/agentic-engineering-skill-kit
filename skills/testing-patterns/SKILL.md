@@ -15,6 +15,7 @@ Use this skill when the task involves:
 - testing NestJS services, guards, or controllers
 - testing API endpoints
 - testing Prisma/database behavior
+- defining migration verification checks
 - writing Playwright UI checks
 - reviewing missing test coverage
 
@@ -46,6 +47,7 @@ Do not use this skill for:
 - Use integration tests for service plus database behavior.
 - Use e2e tests for HTTP contract and auth behavior.
 - Use Playwright for user-facing UI flows.
+- Use verification queries before and after risky migrations.
 - Avoid brittle snapshots unless structure is the behavior.
 - Mock external systems, not the code under test.
 

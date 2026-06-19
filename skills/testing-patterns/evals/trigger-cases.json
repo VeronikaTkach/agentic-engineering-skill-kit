@@ -20,6 +20,11 @@
       "id": "component_test_001",
       "input": "How should we test this React form component?",
       "expected": "trigger"
+    },
+    {
+      "id": "migration_verification_001",
+      "input": "Define verification queries before and after this database migration.",
+      "expected": "trigger"
     }
   ],
   "negative": [

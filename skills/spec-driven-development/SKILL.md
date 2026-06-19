@@ -18,6 +18,7 @@ Use this skill when the task involves:
 - planning tests before implementation
 - clarifying ambiguous requirements
 - preparing an agent prompt for project or feature generation
+- planning high-risk migrations before any migration code is written
 
 ## When Not to Use
 
@@ -27,7 +28,7 @@ Do not use this skill for:
 - styling-only frontend edits
 - simple one-line fixes with obvious behavior
 - security review only
-- database schema review only
+- narrow database schema review when the requirements are already clear
 
 ## Trigger Examples
 

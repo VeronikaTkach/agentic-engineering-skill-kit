@@ -41,6 +41,17 @@ Use when:
 
 Prefer isolated test databases or transaction rollback patterns.
 
+## Migration Verification
+
+For risky migrations, define checks before writing or running the migration:
+
+- preflight query for affected row count
+- query for invalid existing data
+- duplicate detection query before adding uniqueness
+- post-migration constraint verification
+- rollback or restore verification when available
+- application-level smoke test after deployment
+
 ## Guards
 
 Test:

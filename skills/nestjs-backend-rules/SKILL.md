@@ -54,9 +54,10 @@ Negative triggers:
 3. Check `references/nestjs-architecture.md` for module, controller, service, provider, and dependency rules.
 4. Check `references/prisma-postgresql.md` when persistence, transactions, migrations, or query shape are involved.
 5. Check `references/security-validation.md` when auth, authorization, validation, secrets, or high-risk actions are involved.
-6. Use `templates/` when creating new NestJS files.
-7. Use `examples/` as style references.
-8. Keep diffs focused and include verification steps.
+6. Check `references/state-transitions.md` when approval, rejection, cancellation, publishing, payment, or finalization changes state.
+7. Use `templates/` when creating new NestJS files.
+8. Use `examples/` as style references.
+9. Keep diffs focused and include verification steps.
 
 ## Core Rules
 
@@ -97,6 +98,7 @@ When reviewing code:
 - `references/nestjs-architecture.md`
 - `references/prisma-postgresql.md`
 - `references/security-validation.md`
+- `references/state-transitions.md`
 
 ## Templates
 

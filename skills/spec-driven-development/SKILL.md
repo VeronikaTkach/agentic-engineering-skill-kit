@@ -64,6 +64,14 @@ Negative triggers:
 12. Define test strategy before implementation.
 13. Define implementation phases and review gates.
 
+## Scope Discipline
+
+- Do not expand roles, permissions, or allowed actions beyond the user's wording.
+- If the user says "employee can submit", do not silently change that to "any authenticated user can submit".
+- If a broader permission might be useful, put it in Open Questions instead of making it an assumption.
+- Treat ambiguous authority as a product decision, not an implementation detail.
+- Keep non-goals explicit so coding agents do not grow the feature.
+
 ## Spec Structure
 
 Use this structure unless the project already has a stronger convention:

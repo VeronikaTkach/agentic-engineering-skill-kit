@@ -47,6 +47,14 @@ Use assumptions when reasonable progress is possible without blocking the user.
 
 Ask questions only when an assumption would be risky or likely wrong.
 
+Do not use assumptions to broaden authority.
+
+Examples:
+
+- If the user says "employee can submit", do not assume managers can submit too.
+- If the user says "manager can approve", do not assume admins, owners, or agents can approve.
+- Put broader role behavior in Open Questions unless explicitly requested.
+
 ## User Stories
 
 Use:
@@ -87,6 +95,7 @@ Add only the contracts relevant to the task:
 Define:
 
 - who can access the feature
+- who cannot access the feature
 - which data is sensitive
 - which actions mutate state
 - whether approval is required

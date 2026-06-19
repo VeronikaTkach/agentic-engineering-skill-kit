@@ -20,6 +20,11 @@
       "id": "auth_guard_001",
       "input": "Add an authorization guard for admin-only NestJS routes.",
       "expected": "trigger"
+    },
+    {
+      "id": "state_transition_001",
+      "input": "Implement approve and reject endpoints that must prevent double finalization.",
+      "expected": "trigger"
     }
   ],
   "negative": [

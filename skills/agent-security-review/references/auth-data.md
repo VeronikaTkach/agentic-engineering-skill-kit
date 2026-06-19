@@ -7,6 +7,18 @@
 - Keep session and access tokens scoped and short-lived.
 - Do not put tokens in logs, prompts, screenshots, or client bundles.
 
+## Auth Stubs
+
+Header-based auth stubs such as `x-user-id` or `x-user-role` are acceptable only for local development or tests.
+
+Rules:
+
+- Mark header-based auth as dev/test-only.
+- Do not treat client-set headers as a production security boundary.
+- If an upstream gateway is assumed to set headers, state that assumption explicitly.
+- Security review must list stub auth as residual risk.
+- Production exposure requires real authentication and trusted identity propagation.
+
 ## Authorization
 
 Authentication answers who the actor is.

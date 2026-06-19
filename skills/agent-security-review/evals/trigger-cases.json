@@ -25,6 +25,11 @@
       "id": "migration_security_001",
       "input": "Is this production data deletion migration safe to run?",
       "expected": "trigger"
+    },
+    {
+      "id": "auth_stub_001",
+      "input": "Review this header-based auth stub before using it in a NestJS app.",
+      "expected": "trigger"
     }
   ],
   "negative": [

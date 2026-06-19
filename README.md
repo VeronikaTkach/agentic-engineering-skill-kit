@@ -41,7 +41,7 @@ cp /path/to/my-project/agent-skill-kit/AGENTS.template.md /path/to/my-project/AG
 ### Option 2: Git Submodule
 
 ```bash
-git submodule add https://github.com/YOUR_NAME/agentic-engineering-skill-kit.git agent-skill-kit
+git submodule add https://github.com/VeronikaTkach/agentic-engineering-skill-kit.git agent-skill-kit
 cp agent-skill-kit/AGENTS.template.md AGENTS.md
 ```
 

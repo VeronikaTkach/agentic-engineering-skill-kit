@@ -56,6 +56,7 @@ Examples:
 - If the user says "managers can see pending records", do not assume managers can view finalized records through a detail endpoint.
 - Put broader role behavior in Open Questions unless explicitly requested.
 - For write APIs, do not quietly accept client-supplied identity or authority fields. Fields such as `employeeId`, `managerId`, `actorId`, `role`, and `status` should usually be omitted from request DTOs and rejected when supplied.
+- Keep unresolved Open Questions out of the main API contract and data model. For example, if rejection reasons are undecided, do not add `reason` to the request DTO or audit table yet.
 
 ## User Stories
 
@@ -91,6 +92,8 @@ Add only the contracts relevant to the task:
 - database model notes
 - events or jobs
 - external integrations
+
+Do not add framework-specific routing or proxy layers from unrelated project instructions unless they are required by the current task and stack. If repository instructions conflict with the stated stack, describe the conflict in Context or Open Questions instead of embedding the convention into the API contract.
 
 ## Security and Permissions
 

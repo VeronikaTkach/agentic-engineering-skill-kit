@@ -31,6 +31,8 @@ Use enums when:
 
 Document allowed transitions when status drives behavior.
 
+Do not reuse a status enum for audit actions or domain events when the words describe different concepts. Prefer a separate enum such as `ExpenseStatus = PENDING | APPROVED | REJECTED` and `ExpenseAuditAction = APPROVE | REJECT`.
+
 ## Money
 
 - Store money as integer minor units such as cents.

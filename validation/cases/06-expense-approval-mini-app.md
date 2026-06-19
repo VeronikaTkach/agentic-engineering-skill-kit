@@ -53,6 +53,8 @@ Required workflow:
 - Do not trust client-provided `employeeId` or `managerId`.
 - Prefer rejecting client-provided identity or authority fields over silently ignoring them.
 - Header-based auth stubs are dev/test-only and must be called out as residual risk.
+- Do not introduce Next.js route handlers, proxy layers, or other framework conventions unless the current project context explicitly requires them. The expected stack here is React + NestJS + Axios.
+- Do not include unresolved Open Question fields in the committed API/data contract. For example, rejection `reason` should stay out of DTOs and tables until approved.
 - Approve/reject must use a safe state transition pattern.
 - A transaction with re-fetch alone is not enough for concurrent finalization safety.
 - Prefer conditional update where `id = expenseId` and `status = PENDING`; if no row is updated, return `409`.
@@ -93,5 +95,7 @@ The spec should include:
 - Agent identifies approval/rejection as manager-only.
 - Agent requires audit logs for successful approval/rejection.
 - Agent prevents finalized expenses from being changed.
+- Agent keeps unresolved Open Question features out of the API and data model.
+- Agent does not add unrelated framework/proxy conventions to the API contract.
 - Agent specifies conditional state transition or equivalent concurrency-safe pattern.
 - Agent proposes tests for authorization, validation, audit logs, and double-finalization.

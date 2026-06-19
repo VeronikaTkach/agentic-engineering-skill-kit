@@ -72,6 +72,8 @@ Negative triggers:
 - Treat ambiguous authority as a product decision, not an implementation detail.
 - Do not silently accept client-supplied identity or authority fields such as `employeeId`, `managerId`, `actorId`, `role`, or `status`.
 - Prefer rejecting forbidden identity or authority fields in write DTOs unless compatibility requirements explicitly demand ignoring them.
+- Do not import unrelated project conventions, framework routes, or proxy layers into the spec unless the task or repository context clearly requires them.
+- Do not add fields, endpoints, tables, or DTO properties that are still listed as Open Questions.
 - Keep non-goals explicit so coding agents do not grow the feature.
 
 ## Spec Structure

@@ -28,6 +28,17 @@ If no row is updated:
 
 Then create the audit log in the same transaction after the state transition succeeds.
 
+## 404 vs 409
+
+A conditional update that affects zero rows means the target either does not exist or exists but is not in the expected current state.
+
+Choose one behavior explicitly:
+
+- return a generic `409 Conflict` when hiding existence is acceptable
+- run a safe follow-up existence check to map missing records to `404 Not Found` and invalid state to `409 Conflict`
+
+Do not claim that a conditional update alone can distinguish both cases.
+
 ## Why Re-Fetch Alone Is Not Enough
 
 Fetching a record inside a transaction and then updating it can still be fragile if two requests observe the same state before either transition commits.

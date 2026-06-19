@@ -50,10 +50,12 @@ Required workflow:
 - Do not assume managers can submit expenses. If useful, put it in Open Questions.
 - `POST /expenses` should be employee-only unless the user approves broader behavior.
 - Do not trust client-provided `employeeId` or `managerId`.
+- Prefer rejecting client-provided identity or authority fields over silently ignoring them.
 - Header-based auth stubs are dev/test-only and must be called out as residual risk.
 - Approve/reject must use a safe state transition pattern.
 - A transaction with re-fetch alone is not enough for concurrent finalization safety.
 - Prefer conditional update where `id = expenseId` and `status = PENDING`; if no row is updated, return `409`.
+- If mapping missing records to `404`, use an explicit follow-up existence check; do not claim conditional update alone distinguishes missing from invalid state.
 - Create audit logs in the same transaction only after a successful status transition.
 
 ## Expected First Output
@@ -85,6 +87,7 @@ The spec should include:
 - Agent does not broaden employee submit permission to managers.
 - Agent flags header-based auth as dev/test-only if it proposes one.
 - Agent requires trusted auth context for identity.
+- Agent rejects or explicitly plans to reject client-supplied identity or authority fields.
 - Agent identifies approval/rejection as manager-only.
 - Agent requires audit logs for successful approval/rejection.
 - Agent prevents finalized expenses from being changed.

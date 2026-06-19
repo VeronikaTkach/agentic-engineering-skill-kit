@@ -34,6 +34,22 @@ Check:
 - action type
 - approval requirement
 
+## Client-Supplied Authority Fields
+
+Reject client-supplied authority fields unless the product contract explicitly requires a compatibility exception.
+
+Examples:
+
+- `employeeId`
+- `managerId`
+- `actorId`
+- `role`
+- `status`
+- `approvedBy`
+- `decidedBy`
+
+These values should come from trusted auth context, server-side policy, or controlled state transitions.
+
 ## Sensitive Data
 
 Sensitive data includes:

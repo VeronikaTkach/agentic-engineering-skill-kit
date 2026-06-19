@@ -12,6 +12,12 @@ Before starting substantial work, read:
 ./agent-skill-kit/skill-library-map.md
 ```
 
+These skills are project-local files. If your agent runtime cannot invoke them as registered native skills, read the relevant file directly:
+
+```text
+./agent-skill-kit/skills/<skill-name>/SKILL.md
+```
+
 ## Skill Routing
 
 Use the narrowest relevant skill:

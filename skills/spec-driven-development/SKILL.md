@@ -70,6 +70,8 @@ Negative triggers:
 - If the user says "employee can submit", do not silently change that to "any authenticated user can submit".
 - If a broader permission might be useful, put it in Open Questions instead of making it an assumption.
 - Treat ambiguous authority as a product decision, not an implementation detail.
+- Do not silently accept client-supplied identity or authority fields such as `employeeId`, `managerId`, `actorId`, `role`, or `status`.
+- Prefer rejecting forbidden identity or authority fields in write DTOs unless compatibility requirements explicitly demand ignoring them.
 - Keep non-goals explicit so coding agents do not grow the feature.
 
 ## Spec Structure

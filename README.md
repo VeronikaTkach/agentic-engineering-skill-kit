@@ -50,6 +50,12 @@ Then tell your coding agent:
 Work according to AGENTS.md. Before substantial work, read agent-skill-kit/skill-library-map.md and use the narrowest relevant skill from agent-skill-kit/skills.
 ```
 
+Note: these are project-local skills. If your agent runtime cannot invoke them as native registered skills, ask it to read the relevant skill file directly:
+
+```text
+agent-skill-kit/skills/<skill-name>/SKILL.md
+```
+
 ## Quick Prompts
 
 Use these prompts as starting points.
@@ -58,6 +64,7 @@ Use these prompts as starting points.
 
 ```text
 Work according to AGENTS.md. Read agent-skill-kit/skill-library-map.md first, then choose the narrowest relevant skill for the task.
+If a skill is not registered in your runtime, read its local SKILL.md file directly from agent-skill-kit/skills.
 ```
 
 ### Create a Feature Spec

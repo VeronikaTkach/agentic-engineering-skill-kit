@@ -57,6 +57,24 @@ Note: these are project-local skills. If your agent runtime cannot invoke them a
 agent-skill-kit/skills/<skill-name>/SKILL.md
 ```
 
+## Optional Project Context
+
+The kit works out of the box with only:
+
+```text
+AGENTS.md
+agent-skill-kit/
+```
+
+For projects with a defined scope, stack, deadline, security model, or deployment target, add optional project-specific context files at the repository root:
+
+- `AGENTS.project.md` - local agent instructions and scope boundaries.
+- `PROJECT_PLAN.md` - product goals, phases, and deliverables.
+- `DEPLOYMENT_PLAN.md` - hosting, stack, environment, and release rules.
+- `docs/project-brief.md` - concise product or business context.
+
+The generated `AGENTS.md` tells agents to read these files when they exist. If none are present, agents proceed with the base skill routing guidance.
+
 ## Quick Prompts
 
 Use these prompts as starting points.

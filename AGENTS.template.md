@@ -18,6 +18,23 @@ These skills are project-local files. If your agent runtime cannot invoke them a
 ./agent-skill-kit/skills/<skill-name>/SKILL.md
 ```
 
+## Optional Project Context
+
+This skill kit is project-agnostic and works without additional project files.
+
+If the repository includes project-specific context files, read them after this file and before substantial work:
+
+- `AGENTS.project.md`
+- `PROJECT_PLAN.md`
+- `DEPLOYMENT_PLAN.md`
+- `docs/project-brief.md`
+
+Project-specific context may define product goals, stack choices, scope boundaries, deployment targets, security requirements, or delivery phases.
+
+If none of these files exist, proceed using this `AGENTS.md`, `agent-skill-kit/skill-library-map.md`, and the narrowest relevant skill for the user's request.
+
+When project-specific instructions conflict with this file, follow the more specific project instruction unless it weakens safety, security, review discipline, or explicit user instructions.
+
 ## Skill Routing
 
 Use the narrowest relevant skill:

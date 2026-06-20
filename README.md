@@ -57,6 +57,47 @@ Note: these are project-local skills. If your agent runtime cannot invoke them a
 agent-skill-kit/skills/<skill-name>/SKILL.md
 ```
 
+## Public MCP Access
+
+The skill library is also available through a public, read-only MCP Skill Server:
+
+```text
+https://ai-product-factory-mcp.onrender.com/mcp
+```
+
+Health check:
+
+```text
+https://ai-product-factory-mcp.onrender.com/health
+```
+
+Use this option when your agent client supports the MCP Streamable HTTP transport and you want to discover or retrieve skills without vendoring the kit into a project.
+
+Available tools:
+
+- `list_skills` - list available skills and metadata.
+- `get_skill` - retrieve a specific skill by id.
+- `recommend_skills` - recommend skills for a project or business idea context.
+- `score_readiness` - compute a simple readiness score for generated blueprint artifacts.
+
+Example client setup, adapted to your MCP-compatible tool:
+
+```json
+{
+  "name": "agentic-engineering-skill-kit",
+  "transport": "streamable-http",
+  "url": "https://ai-product-factory-mcp.onrender.com/mcp"
+}
+```
+
+Limitations:
+
+- The public MCP server is read-only. It cannot write files, execute commands, access secrets, or read arbitrary filesystem paths.
+- It exposes only the bundled skill content and lightweight recommendation/scoring tools.
+- It is hosted on Render Free, so the first request after inactivity can take 30-90 seconds while the service wakes up.
+- Availability is best-effort for demonstration and experimentation. For production workflows, vendor the kit into your project or deploy your own MCP server.
+- Client configuration differs across Claude, Cursor, Codex, and other MCP clients. Use the endpoint above with any client that supports Streamable HTTP MCP servers.
+
 ## Optional Project Context
 
 The kit works out of the box with only:

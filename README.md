@@ -2,7 +2,7 @@
 
 A portable skill library for agent-assisted software development.
 
-This kit packages reusable agent skills, routing guidance, and roadmap documents for building production-minded agentic workflows around TypeScript, React, PWA, NestJS, PostgreSQL, Prisma, MCP, security review, evaluation, observability, A2A, A2UI, and agentic commerce patterns.
+This kit packages reusable agent skills, routing guidance, and roadmap documents for building production-minded agentic workflows around TypeScript, React, Next.js, PWA, NestJS, PostgreSQL, Prisma, MCP, browser validation, security review, evaluation, observability, A2A, A2UI, and agentic commerce patterns.
 
 ## What's Included
 
@@ -16,10 +16,13 @@ This kit packages reusable agent skills, routing guidance, and roadmap documents
 
 - `spec-driven-development`
 - `react-enterprise-rules`
+- `frontend-production-review`
+- `nextjs-route-handler-proxy`
 - `pwa-rules`
 - `nestjs-backend-rules`
 - `database-design-rules`
 - `testing-patterns`
+- `browser-test-cases`
 - `typescript-code-review`
 - `code-review`
 - `agent-security-review`
@@ -145,6 +148,24 @@ Implement the approved spec. Use react-enterprise-rules for frontend, nestjs-bac
 Use pwa-rules for this PWA work. Cover manifest, service worker strategy, offline/online UX, cache invalidation, app update behavior, installability, Lighthouse checks, and browser/device testing.
 ```
 
+### Senior Frontend Production Review
+
+```text
+Use frontend-production-review. Ask whether this is a BIG or SMALL review, then review architecture, code quality, tests, and performance with concrete tradeoffs and recommendations.
+```
+
+### Next.js Route Handler Proxy
+
+```text
+Use nextjs-route-handler-proxy for this Next.js App Router API proxy work. Client code must call local route handlers only; API_URL must stay server-side.
+```
+
+### Browser Test Case
+
+```text
+Use browser-test-cases to run the [case id] case from .claude/test-cases.json. Report console errors, page errors, failed requests, final URL, and pass/fail status.
+```
+
 ### Focused TypeScript Review
 
 ```text
@@ -169,11 +190,14 @@ For new features:
 
 1. Start with `spec-driven-development`.
 2. Use implementation skills for affected layers.
-3. Use `pwa-rules` when the app is installable, offline-capable, or uses service workers/cache storage.
-4. Use `testing-patterns`.
-5. Use `typescript-code-review`.
-6. Use `agent-security-review` when sensitive data, permissions, tools, production, or external actions are involved.
-7. Use `code-review` before merge.
+3. Use `nextjs-route-handler-proxy` when a Next.js App Router project proxies backend APIs through route handlers.
+4. Use `pwa-rules` when the app is installable, offline-capable, or uses service workers/cache storage.
+5. Use `testing-patterns`.
+6. Use `browser-test-cases` when validating saved browser scenarios.
+7. Use `typescript-code-review`.
+8. Use `frontend-production-review` for senior frontend production reviews.
+9. Use `agent-security-review` when sensitive data, permissions, tools, production, or external actions are involved.
+10. Use `code-review` before merge.
 
 ## Status
 

@@ -24,6 +24,20 @@ Best for:
 
 ## Frontend Implementation
 
+### astro-framework-best-practices
+
+Use when generating, refactoring, reviewing, or planning Astro framework projects.
+
+Best for:
+
+- Astro architecture decisions
+- static/prerender vs hybrid SSR vs full SSR
+- islands and hydration strategy
+- Astro routing, endpoints, content, and integrations
+- image/media handling with `astro:assets`
+- Google-safe rendering and crawlability
+- Core Web Vitals and production readiness
+
 ### react-enterprise-rules
 
 Use when generating, refactoring, or reviewing frontend application code.
@@ -78,6 +92,23 @@ Best for:
 - installability checks
 - Lighthouse PWA checks
 - browser/device validation
+
+## SEO and Search
+
+### music-artist-landing-seo
+
+Use when planning, auditing, writing, or technically reviewing SEO for music artist, DJ, producer, label, release, tour, press, EPK, or booking-focused websites.
+
+Best for:
+
+- artist entity SEO
+- page maps and search intent
+- metadata packs
+- schema markup for artist, releases, events, videos, and organization data
+- image and video SEO
+- Google crawlability and JavaScript SEO
+- Core Web Vitals for media-heavy pages
+- sitemap, canonical, Open Graph, and launch readiness
 
 ## Backend Implementation
 
